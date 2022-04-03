@@ -1,0 +1,54 @@
+{
+    "name": "alphaolomi/laracon",
+    "description": "Larcon TZ 2022 Demo",
+    "keywords": [
+        "alphaolomi",
+        "laracon"
+    ],
+    "homepage": "https://github.com/alphaolomi/laracon",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alpha",
+            "email": "hello@alphaolomi.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.1",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alphaolomi\\Laracon\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alphaolomi\\Laracon\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alphaolomi\\Laracon\\LaraconServiceProvider"
+            ],
+            "aliases": {
+                "Laracon": "Alphaolomi\\Laracon\\LaraconFacade"
+            }
+        }
+    }
+}
